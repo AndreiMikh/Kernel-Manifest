@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote fetch="https://git.codelinaro.org/clo/la" name="clo-la"/>
+  <remote fetch="https://github.com/OnePlusOSS" name="origin"/>
+  <remote fetch="https://github.com/" name="github"/>
+
+  <default remote="clo-la" revision="dummy_revision" sync-c="true" sync-tags="false"/>
+
+  <!-- REPLACED common kernel with cctv18 -->
+  <project remote="github"
+           name="cctv18/android_kernel_common_oneplus_sm8850"
+           path="kernel_platform/common"
+           revision="oneplus/sm8850_v_16.0.0_oneplus_15"
+           clone-depth="1">
+    <linkfile dest="kernel_platform/.source_date_epoch_dir" src="."/>
+  </project>
+
+  <!-- KEEP MSM kernel -->
+  <project remote="origin"
+           name="android_kernel_oneplus_sm8750"
+           path="kernel_platform/msm-kernel"
+           revision="oneplus/sm8750_b_16.0.0_oneplus_13">
+    <linkfile dest="kernel_platform/build_with_bazel.py" src="build_with_bazel.py"/>
+  </project>
+
+  <!-- KEEP modules -->
+  <project remote="origin"
+           name="android_kernel_modules_and_devicetree_oneplus_sm8750"
+           path="./"
+           revision="oneplus/sm8750_b_16.0.0_oneplus_13"/>
+
+  <!-- keep rest unchanged -->
+
+</manifest>
