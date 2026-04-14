@@ -14,7 +14,7 @@
   </project>
   <project name="android_kernel_oneplus_sm8750-modules"
            remote="lineage"
-           path="."
+           path="sm8750-modules"
            revision="lineage-23.2"/>
   <project name="kernel/prebuilts/build-tools"
            remote="clo"
