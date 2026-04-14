@@ -3,7 +3,7 @@
   <remote name="lineage" fetch="https://github.com/LineageOS"/>
   <remote name="aosp" fetch="https://android.googlesource.com"/>
   <remote name="clo" fetch="https://git.codelinaro.org/clo/la"/>
-  <default remote="aosp" revision="main-kernel-2025" sync-j="8" clone-depth="1"/>
+  <default remote="aosp" revision="main-kernel-2025" sync-j="4" clone-depth="1"/>
   <superproject name="kernel/superproject" remote="aosp" revision="common-android15-6.6-2025-09"/>
   <project name="android_kernel_oneplus_sm8750"
            remote="lineage"
