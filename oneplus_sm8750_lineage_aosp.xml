@@ -21,11 +21,11 @@
            groups="ddk">
         <linkfile dest="kernel_platform/build/prebuilts/kernel-build-tools" src="."/>
   </project>
-  <project name="platform/prebuilts/clang/host/linux-x86"
+  <project name="kernel/prebuilts/clang/host/linux-x86"
            remote="aosp"
            path="kernel_platform/prebuilts/clang/host/linux-x86"
            groups="ddk"/>
-  <project name="platform/prebuilts/rust"
+  <project name="kernel/prebuilts/rust"
            remote="aosp"
            path="kernel_platform/prebuilts/rust"
            groups="ddk"/>  
