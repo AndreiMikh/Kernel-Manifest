@@ -10,9 +10,9 @@
     <linkfile dest="kernel_platform/.source_date_epoch_dir" src="."/>
   </project>
 
-  <project remote="lineage" name="android_kernel_oneplus_sm8750-modules" path="modules" revision="lineage-23.2" clone-depth="1"/>
+  <project remote="lineage" name="android_kernel_oneplus_sm8750-modules" path="kernel_platform/modules" revision="lineage-23.2" clone-depth="1"/>
 
-  <project remote="lineage" name="android_kernel_oneplus_sm8750-devicetrees" path="devicetree" revision="lineage-23.2" clone-depth="1"/>
+  <project remote="lineage" name="android_kernel_oneplus_sm8750-devicetrees" path="kernel_platform/devicetree" revision="lineage-23.2" clone-depth="1"/>
 
   <project remote="aosp" name="kernel/prebuilts/build-tools" path="kernel_platform/prebuilts/kernel-build-tools" clone-depth="1" groups="ddk">
     <linkfile dest="kernel_platform/build/prebuilts/kernel-build-tools" src="."/>
