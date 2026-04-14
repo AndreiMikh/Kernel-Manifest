@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-
   <remote name="aosp" fetch="https://android.googlesource.com"/>
-  <remote name="lineage" fetch="https://github.com/LineageOS"/>
-  <remote name="ace" fetch="https://github.com/Ace6-Development"/>
-
+  <remote name="lineage" fetch="https://github.com/LineageOS"/> 
   <default remote="aosp"
            revision="main-kernel-2025"
            sync-j="4" />
-
   <superproject name="kernel/superproject"
                 remote="aosp"
                 revision="common-android15-6.6-2026-04" />
-
   <project name="android_kernel_oneplus_sm8750"
            remote="lineage"
            path="kernel_platform/common"
@@ -20,19 +15,16 @@
            clone-depth="1">
     <linkfile dest="kernel_platform/.source_date_epoch_dir" src="."/>
   </project>
-
   <project name="android_kernel_oneplus_sm8750-modules"
            remote="lineage"
            path="kernel_platform/modules"
            revision="lineage-23.2"
            clone-depth="1" />
-
   <project name="android_kernel_oneplus_sm8750-devicetrees"
-           remote="ace"
+           remote="lineage"
            path="kernel_platform/devicetree"
            revision="lineage-23.2"
            clone-depth="1" />
-
   <project name="kernel/prebuilts/build-tools"
            remote="aosp"
            path="kernel_platform/prebuilts/kernel-build-tools"
@@ -40,17 +32,14 @@
            groups="ddk">
     <linkfile dest="kernel_platform/build/prebuilts/kernel-build-tools" src="."/>
   </project>
-
   <project name="platform/prebuilts/clang/host/linux-x86"
            remote="aosp"
            path="kernel_platform/prebuilts/clang/host/linux-x86"
            clone-depth="1"
            groups="ddk" />
-
   <project name="platform/prebuilts/rust"
            remote="aosp"
            path="kernel_platform/prebuilts/rust"
            clone-depth="1"
            groups="ddk" />
-
 </manifest>
