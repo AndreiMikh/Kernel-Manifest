@@ -33,12 +33,6 @@
            revision="lineage-23.2"
            clone-depth="1" />
 
-  <project name="android_hardware_oplus"
-           remote="ace"
-           path="hardware/oplus"
-           revision="lineage-23.2"
-           clone-depth="1" />
-
   <project name="kernel/prebuilts/build-tools"
            remote="aosp"
            path="kernel_platform/prebuilts/kernel-build-tools"
