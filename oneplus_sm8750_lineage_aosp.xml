@@ -2,7 +2,7 @@
 <manifest>
   <remote name="lineage" fetch="https://github.com/LineageOS"/>
   <remote name="aosp" fetch="https://android.googlesource.com"/>
-  <default remote="aosp" revision="common-android15-6.6-2025-09" sync-c="true" sync-tags="false"/>
+  <default remote="aosp" revision="main-kernel-2025" sync-c="true" sync-tags="false"/>
   <superproject name="kernel/superproject" remote="aosp" revision="common-android15-6.6-2025-09"/>
   <project name="android_kernel_oneplus_sm8750"
            remote="lineage"
@@ -14,36 +14,9 @@
            remote="lineage"
            path="kernel_platform/sm8750-modules"
            revision="lineage-23.2"/>
-  <project remote="aosp" name="build/bazel_common_rules" path="kernel_platform/build/bazel_common_rules" groups="ddk"/>
-  <project remote="aosp" name="build/kernel" path="kernel_platform/build/kernel" groups="ddk"/>
-  <project remote="aosp" name="common-modules/trusty" path="kernel_platform/common-modules/trusty"/>
-  <project remote="aosp" name="common-modules/virtio-media" path="kernel_platform/common-modules/virtio-media"/>
-  <project remote="aosp" name="common-modules/virtual-device" path="kernel_platform/common-modules/virtual-device"/>
-  <project remote="aosp" name="external/python/absl-py" path="kernel_platform/external/python/absl-py" groups="ddk-external"/>
-  <project remote="aosp" name="external/bazel-skylib" path="kernel_platform/external/bazel-skylib" groups="ddk-external"/>
-  <project remote="aosp" name="external/bazelbuild-apple_support" path="kernel_platform/external/bazelbuild-apple_support" groups="ddk-external"/>
-  <project remote="aosp" name="external/bazelbuild-bazel-central-registry" path="kernel_platform/external/bazelbuild-bazel-central-registry" groups="ddk-external"/>
-  <project remote="aosp" name="external/bazelbuild-platforms" path="kernel_platform/external/bazelbuild-platforms" groups="ddk-external"/>
-  <project remote="aosp" name="external/bazelbuild-rules_cc" path="kernel_platform/external/bazelbuild-rules_cc" groups="ddk-external"/>
-  <project remote="aosp" name="external/bazelbuild-rules_java" path="kernel_platform/external/bazelbuild-rules_java" groups="ddk-external"/>
-  <project remote="aosp" name="external/bazelbuild-rules_license" path="kernel_platform/external/bazelbuild-rules_license" groups="ddk-external"/>
-  <project remote="aosp" name="external/bazelbuild-rules_pkg" path="kernel_platform/external/bazelbuild-rules_pkg" groups="ddk-external"/>
-  <project remote="aosp" name="external/bazelbuild-rules_python" path="kernel_platform/external/bazelbuild-rules_python" groups="ddk-external"/>
-  <project remote="aosp" name="external/libcap" path="kernel_platform/external/libcap"/>
-  <project remote="aosp" name="external/libcap-ng" path="kernel_platform/external/libcap-ng"/>
-  <project remote="aosp" name="external/lz4" path="kernel_platform/external/lz4" groups="ddk"/>
-  <project remote="aosp" name="external/pigz" path="kernel_platform/external/pigz" groups="ddk"/>
-  <project remote="aosp" name="external/toybox" path="kernel_platform/external/toybox" groups="ddk"/>
-  <project remote="aosp" name="external/zlib" path="kernel_platform/external/zlib" groups="ddk"/>
-  <project remote="aosp" name="external/zopfli" path="kernel_platform/external/zopfli" groups="ddk"/>
-  <project remote="aosp" name="kernel/configs" path="kernel_platform/kernel/configs"/>
-  <project remote="aosp" name="prebuilts/clang/host/linux-x86" path="kernel_platform/prebuilts/clang/host/linux-x86"/>
-  <project remote="aosp" name="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" path="kernel_platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8"/>
-  <project remote="aosp" name="prebuilts/jdk/jdk11" path="kernel_platform/prebuilts/jdk/jdk11"/>
-  <project remote="aosp" name="prebuilts/build-tools" path="kernel_platform/prebuilts/build-tools" groups="ddk"/>
-  <project remote="aosp" name="prebuilts/clang-tools" path="kernel_platform/prebuilts/clang-tools"/>
-  <project remote="aosp" name="prebuilts/kernel-build-tools" path="kernel_platform/prebuilts/kernel-build-tools" groups="ddk"/>
-  <project remote="aosp" name="prebuilts/ndk/r26" path="kernel_platform/prebuilts/ndk-r26" groups="ddk"/>
-  <project remote="aosp" name="prebuilts/rust" path="kernel_platform/prebuilts/rust"/>
-  <project remote="aosp" name="tools/mkbootimg" path="kernel_platform/tools/mkbootimg"/>
+  <project remote="aosp" name="kernel/prebuilts/build-tools" path="kernel_platform/prebuilts/kernel-build-tools" groups="ddk"/>
+    <linkfile dest="kernel_platform/build/prebuilts/kernel-build-tools" src="."/>
+  </project>
+  <project remote="aosp" name="platform/prebuilts/clang/host/linux-x86" path="kernel_platform/prebuilts/clang/host/linux-x86" groups="ddk"/>
+  <project remote="aosp" name="platform/prebuilts/rust" path="kernel_platform/prebuilts/rust" groups="ddk"/>
 </manifest>
