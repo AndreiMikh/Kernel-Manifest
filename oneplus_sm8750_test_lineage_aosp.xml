@@ -3,7 +3,8 @@
   <remote fetch="https://git.codelinaro.org/clo/la" name="clo-la"/>
   <remote name="lineage" fetch="https://github.com/LineageOS"/>
   <remote name="aosp" fetch="https://android.googlesource.com"/>  
-  <default revision="main-kernel-2025" remote="aosp" sync-j="4" />
+  <default revision="main-kernel-2025" remote="aosp"/>
+  <superproject name="kernel/superproject" remote="aosp" revision="common-android15-6.6-2025-06" />
   <project remote="lineage" name="kernel/superproject" path="kernel_platform/common" revision="lineage-23.2">
     <linkfile dest="kernel_platform/.source_date_epoch_dir" src="."/>
   </project>  
@@ -11,11 +12,11 @@
     <linkfile dest="kernel_platform/build_with_bazel.py" src="build_with_bazel.py"/>
   </project>
   <project remote="lineage" name="android_kernel_oneplus_sm8750-devicetrees" path="./" revision="lineage-23.2"/>
-  <project remote="aosp" name="platform/prebuilts/rust" path="kernel_platform/prebuilts/rust" clone-depth="1" groups="ddk" /> 
-  <project remote="aosp" name="kernel/prebuilts/build-tools" path="kernel_platform/prebuilts/kernel-build-tools" clone-depth="1" groups="ddk">
+  <project remote="aosp" name="platform/prebuilts/rust" path="kernel_platform/prebuilts/rust" groups="ddk" /> 
+  <project remote="aosp" name="kernel/prebuilts/build-tools" path="kernel_platform/prebuilts/kernel-build-tools" groups="ddk">
     <linkfile dest="kernel_platform/build/prebuilts/kernel-build-tools" src="."/>
   </project>
-  <project remote="aosp" name="platform/prebuilts/clang-tools" path="kernel_platform/prebuilts/clang-tools" clone-depth="1" groups="ddk" />  
-  <project remote="aosp" name="platform/prebuilts/clang/host/linux-x86" path="kernel_platform/prebuilts/clang/host/linux-x86" clone-depth="1" groups="ddk" />  
-  <project remote="aosp" name="platform/prebuilts/rust" path="kernel_platform/prebuilts/rust" clone-depth="1" groups="ddk" />
+  <project remote="aosp" name="platform/prebuilts/clang-tools" path="kernel_platform/prebuilts/clang-tools" groups="ddk" />  
+  <project remote="aosp" name="platform/prebuilts/clang/host/linux-x86" path="kernel_platform/prebuilts/clang/host/linux-x86" groups="ddk" />  
+  <project remote="aosp" name="platform/prebuilts/rust" path="kernel_platform/prebuilts/rust" groups="ddk" />
 </manifest>
