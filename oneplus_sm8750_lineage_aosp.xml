@@ -3,17 +3,25 @@
   <remote fetch="https://git.codelinaro.org/clo/la" name="clo-la"/>
   <remote name="lineage" fetch="https://github.com/LineageOS"/>
   <remote name="aosp" fetch="https://android.googlesource.com"/>  
+
   <default revision="main-kernel-2025" remote="aosp"/>
+
   <superproject name="kernel/superproject" remote="aosp" revision="common-android15-6.6-2025-09" />
+
   <project remote="lineage" name="android_kernel_oneplus_sm8750" path="kernel_platform/common" revision="lineage-23.2">
     <linkfile dest="kernel_platform/.source_date_epoch_dir" src="."/>
   </project>  
-  <project remote="lineage" name="android_kernel_oneplus_sm8750" path="kernel_platform/sm8750-modules" revision="lineage-23.2">
+
+  <project remote="lineage" name="android_kernel_oneplus_sm8750-modules" path="kernel_platform/sm8750-modules" revision="lineage-23.2"/>
+
   <project remote="lineage" name="android_kernel_oneplus_sm8750-devicetrees" path="./" revision="lineage-23.2"/>
+
   <project remote="aosp" name="platform/prebuilts/rust" path="kernel_platform/prebuilts/rust" groups="ddk" /> 
+
   <project remote="aosp" name="kernel/prebuilts/build-tools" path="kernel_platform/prebuilts/kernel-build-tools" groups="ddk">
     <linkfile dest="kernel_platform/build/prebuilts/kernel-build-tools" src="."/>
   </project>
+
   <project remote="aosp" name="platform/prebuilts/clang/host/linux-x86" path="kernel_platform/prebuilts/clang/host/linux-x86" groups="ddk" />  
-  <project remote="aosp" name="platform/prebuilts/rust" path="kernel_platform/prebuilts/rust" groups="ddk" />
+
 </manifest>
