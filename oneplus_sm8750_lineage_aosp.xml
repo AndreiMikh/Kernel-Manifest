@@ -12,7 +12,7 @@
     <linkfile dest="kernel_platform/.source_date_epoch_dir" src="."/>
   </project>  
 
-  <project remote="lineage" name="android_kernel_oneplus_sm8750-modules" path="kernel_platform/msm-kernel" revision="lineage-23.2"/>
+  <project remote="lineage" name="android_kernel_oneplus_sm8750-modules" path="kernel_platform/sm8750-modules" revision="lineage-23.2"/>
 
   <project remote="lineage" name="android_kernel_oneplus_sm8750-devicetrees" path="./" revision="lineage-23.2"/>
 
