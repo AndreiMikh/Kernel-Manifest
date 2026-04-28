@@ -3,26 +3,56 @@
   <remote name="clo-la" fetch="https://git.codelinaro.org/clo/la"/>
   <remote name="lineage" fetch="https://github.com/LineageOS"/>
   <remote name="aosp" fetch="https://android.googlesource.com"/>  
-
   <default revision="main-kernel-2025" remote="aosp"/>
-
-  <superproject name="kernel/superproject" remote="aosp" revision="common-android15-6.6-2025-09" />
-
-  <project remote="lineage" name="android_kernel_oneplus_sm8750" path="kernel_platform/common" revision="lineage-23.2">
-    <linkfile dest="kernel_platform/.source_date_epoch_dir" src="."/>
+  <superproject 
+      name="kernel/superproject" 
+      remote="aosp" 
+      revision="common-android15-6.6-2025-09" />
+  <project 
+      remote="lineage" 
+      name="android_kernel_oneplus_sm8750" 
+      path="kernel_platform/common" 
+      revision="lineage-23.2">
+    <linkfile 
+        dest="kernel_platform/.source_date_epoch_dir" 
+        src="."/>
   </project>  
-
-  <project remote="lineage" name="android_kernel_oneplus_sm8750-modules" path="kernel_platform/sm8750-modules/msm-kernel" revision="lineage-23.2"/>
-
-  <project remote="lineage" name="android_kernel_oneplus_sm8750-devicetrees" path="./" revision="lineage-23.2"/>
-
-  <project remote="aosp" name="platform/prebuilts/rust" path="kernel_platform/prebuilts/rust" groups="ddk" /> 
-
-  <project remote="aosp" name="kernel/prebuilts/build-tools" path="kernel_platform/prebuilts/kernel-build-tools" groups="ddk">
-    <linkfile dest="kernel_platform/build/prebuilts/kernel-build-tools" src="."/>
+  <project 
+      remote="lineage" 
+      name="android_kernel_oneplus_sm8750-modules" 
+      path="kernel_platform/sm8750-modules/msm-kernel" 
+      revision="lineage-23.2"/>
+  <project 
+      remote="lineage" 
+      name="android_kernel_oneplus_sm8750-devicetrees" 
+      path="./" 
+      revision="lineage-23.2"/>
+  <project 
+      remote="aosp" 
+      name="platform/prebuilts/rust" 
+      path="kernel_platform/prebuilts/rust" 
+      revision="442511af884f074018466f85b4daadd4b0ac0050"
+      groups="ddk" /> 
+  <project 
+      remote="aosp" 
+      name="kernel/prebuilts/build-tools" 
+      path="kernel_platform/prebuilts/kernel-build-tools"
+      revision="bfa65e7422cc88dc64ef3ca224daf214a77fb4d5"
+      groups="ddk">
+    <linkfile 
+        dest="kernel_platform/build/prebuilts/kernel-build-tools" 
+        src="."/>
   </project>
-
-  <project remote="aosp" name="platform/prebuilts/clang-tools" path="kernel_platform/prebuilts/clang-tools" groups="ddk" />  
-
-  <project remote="clo-la" name="kernelplatform/prebuilts-master/clang/host/linux-x86" path="kernel_platform/prebuilts/clang/host/linux-x86" revision="b099698c583b8361ca771f3cc8d6af6f729f39b3" upstream="refs/heads/ks-kernel.lnx.4.0.r1-rel" groups="ddk"/>
+  <project 
+      remote="aosp" 
+      name="platform/prebuilts/clang-tools" 
+      path="kernel_platform/prebuilts/clang-tools"
+      revision="1634c6a556d1f2c24897bf74156c6449486e8941"
+      groups="ddk" />  
+  <project 
+      remote="aosp"
+      name="platform/prebuilts/clang/host/linux-x86"
+      path="kernel_platform/prebuilts/clang/host/linux-x86"
+      revision="a86cb6592a29d53254d3a88ff2d8282233a273e2"
+      groups="ddk"/>
 </manifest>
