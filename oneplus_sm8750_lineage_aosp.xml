@@ -37,7 +37,7 @@
       remote="aosp" 
       name="kernel/prebuilts/build-tools" 
       path="kernel_platform/prebuilts/kernel-build-tools"
-      revision="bfa65e7422cc88dc64ef3ca224daf214a77fb4d5"
+      revision="b46264b70e3cdf70d08c9ae2df6ea3002b242ebc"
       groups="ddk">
     <linkfile 
         dest="kernel_platform/build/prebuilts/kernel-build-tools" 
