@@ -6,27 +6,27 @@
   <default revision="16.0" remote="crdroid" />
   <project
       name="android_kernel_oneplus_sm8750"
-      path="kernel/oneplus/sm8750"
+      path="kernel_platform/oneplus/sm8750"
       remote="crdroid"
       revision="16.0" />
   <project
       name="android_kernel_oneplus_sm8750-devicetrees"
-      path="kernel/oneplus/sm8750-devicetrees"
+      path="kernel_platform/oneplus/sm8750-devicetrees"
       remote="crdroid"
       revision="16.0" />
   <project
       name="android_kernel_oneplus_sm8750-modules"
-      path="kernel/oneplus/sm8750-modules"
+      path="kernel_platform/oneplus/sm8750-modules"
       remote="crdroid"
       revision="16.0" />
   <project
       name="android_hardware_oplus"
-      path="hardware/oplus"
+      path="kernel_platform/hardware/oplus"
       remote="crdroid"
       revision="16.0" />
   <project
       name="proprietary_vendor_oneplus_sm8750-common"
-      path="vendor/oneplus/sm8750-common"
+      path="kernel_platform/vendor/oneplus/sm8750-common"
       remote="themuppets"
       revision="lineage-23.2" />
   <project
